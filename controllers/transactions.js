@@ -5,6 +5,10 @@ const Transaction = require("../models/Transaction");
 //@access Public
 
 exports.getTransactions = async (req, res, next) => {
+  // return res.status(200).json({
+  //   success: true,
+  //   data: []
+  // });
   try {
     const transactions = await Transaction.find();
     return res.status(200).json({

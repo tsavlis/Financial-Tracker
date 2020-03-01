@@ -14,8 +14,8 @@ export const TransactionList = () => {
     <>
       <h3>History</h3>
       <ul className="list">
-        {transactions.map(item => (
-          <Transaction item={item} key={item.id} />
+        {transactions.map((item, index) => (
+          <Transaction item={item} key={index} />
         ))}
       </ul>
     </>
